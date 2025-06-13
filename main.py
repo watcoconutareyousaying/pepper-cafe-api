@@ -1,10 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-import os
-
-from app.api import auth, users
-from app.database import Base, engine
 
 load_dotenv()
 
@@ -21,9 +17,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app.include_router(auth.router)
-app.include_router(users.router)
 
 
 @app.get("/")
