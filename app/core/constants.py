@@ -1,1 +1,0 @@
-ROLES = ["owner", "admin", "staff"]
